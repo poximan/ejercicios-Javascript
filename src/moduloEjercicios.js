@@ -199,9 +199,7 @@ export const expandirInformacionPelicula = (nombrePelicula) => {
 
   let criticas = []
   for (let calificacion of calificaciones)
-    criticas.push(
-      basededatos.criticos.find((critico) => { critico.id == calificacion.critico })
-    )
+    criticas.push(basededatos.criticos.find((critico) => critico.id === calificacion.critico))
   pelicula.criticas = criticas
 
   return pelicula;
